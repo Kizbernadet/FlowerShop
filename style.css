@@ -124,7 +124,7 @@ header{
     transform: translate(-50%, -50%);
     display: block;
     width: 100%;
-    height: 5px;
+    height: 2.5px;
     background-color: white;
 }
 
@@ -136,9 +136,9 @@ header{
     position: absolute;
     content: " ";
     width: 100%;
-    height: 5px;
+    height: 2.5px;
     background-color: white;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 .menu-button span::before{
@@ -457,19 +457,11 @@ footer{
         margin-right: 30px;
     }
 
-    /* .scroll-down{
-        display: none;
-    } */
-
     /* ==== TOPBAR ==== */
 
     /* ==== HEADER ==== */
 
     /* ==== SERVICES ==== */
-    .services{
-        display: block;
-        background-color: peru;
-    }
 
     .services .box-services{
         padding: 20px 10px;
@@ -483,7 +475,6 @@ footer{
     /* ==== BEST SELLERS ==== */
     .best-sellers{
         padding: 0px;
-        background-color: tomato;
     }
 
     .best-sellers .best-plants{
@@ -503,18 +494,8 @@ footer{
     }
 
     /* ==== BEST SELLERS ==== */
-    .products{
-        background-color: purple;
-    }
-    /* .products .items{
-        position: relative;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    } */
     /* First Grid */
     .products .first-grid{
-        background-color: tomato;
         padding: 10px;
     }
     /* First Grid */
@@ -522,7 +503,6 @@ footer{
     /* Second Grid */
     .products .second-grid{
         grid-template-columns: 1fr 1fr 1fr;
-        background-color: turquoise;
         padding: 10px;
     }
     /* ==== OUR PRODUCTS ==== */
@@ -535,32 +515,93 @@ footer{
 /* ==== TABLETTES ==== */
 @media screen and (max-width: 768px){
 
+    /* ==== SPECIAL STYLES CLASSES ==== */
+
+    h1.title{
+        font-size: 30px;
+    }
+    /* ==== SPECIAL STYLES CLASSES ==== */
+
     /* ==== BEST SELLERS ==== */
     
     /* Second Grid */
     .products .second-grid{
         grid-template-columns: 1fr 1fr 1fr;
-        background-color: turquoise;
         padding: 10px;
     }
 
     .second-grid .plant-details{
         flex-direction: column;
-        background-color: pink;
     }
     .plant-details p{
-        color: black;
-        text-transform: capitalize;
         margin-bottom: 10px;
-    }
-    .plant-details p span{
-        color: #89ca48;
     }
     /* ==== OUR PRODUCTS ==== */
     
 }
 
+@media screen and (max-width: 700px) {
+    /* ==== BEST SELLERS ==== */
+    .products .first-grid{
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 500px);
+    }
+
+    .products .item1{
+        grid-row: 3/4;
+    }
+    /* Second Grid */
+    .products .second-grid{
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 500px);
+    }
+
+    .products .first-grid, .products .second-grid{
+        row-gap: 10px;
+    }
+}
+
 /* ==== MINI SMARTPHONES ==== */
 @media screen and (max-width: 480px){
+
+    /* ==== HEADER ==== */
+
+    /* ==== TOPBAR ==== */
+    header{
+        display: block;
+    }
+    .topbar{
+        padding: 0px 10px;
+        height: 100px;
+    }
+
+    .topbar .logo{
+        width: 100px;
+        height: 60px;
+    }
+
+    .topbar .menu-button{
+        width: 50px;
+        height: 10px;
+        margin: 0;
+    }
+
+    .menu-button span::before{
+        transform: translateY(-13px);
+    }
+    
+    .menu-button span::after{
+        transform: translateY(13px);
+    }
+
+    /* .scroll-down{
+        display: none;
+    } */
+
+    /* ==== TOPBAR ==== */
+
+    /* ==== HEADER ==== */
     
 }
