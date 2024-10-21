@@ -16,16 +16,38 @@
     box-sizing: border-box;
 }
 
-/* Variables : Ensemble des variables utilisées dans ce code */
+/* === Variables : Ensemble des variables utilisées dans ce code === */
 :root{
     /* Colors */
     --full-page-color : white;
     --primary-color : #ADD981;
+    --second-color : #84ba4d;
 
     /* Fonts */
     --main-font : "Montserrat", sans-serif;
     --title-font : "Abril Fatface", serif;
 }
+
+/* ==== Stylisation de la scrollBar === */
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--full-page-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    /* border-radius: 10px; */
+    border: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--second-color);
+}
+/* ==== Stylisation de la scrollBar === */
 
 body{
     width: 100vw;
