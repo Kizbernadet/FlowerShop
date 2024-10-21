@@ -10,28 +10,27 @@
 /* Polices */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.abril-fatface-regular {
-    font-family: "Abril Fatface", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.montserrat{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}  
-
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+/* Variables : Ensemble des variables utilisées dans ce code */
+:root{
+    /* Colors */
+    --full-page-color : white;
+    --primary-color : #ADD981;
+
+    /* Fonts */
+    --main-font : "Montserrat", sans-serif;
+    --title-font : "Abril Fatface", serif;
+}
+
 body{
     width: 100vw;
     height: 100vh;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--main-font);
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -39,16 +38,18 @@ body{
     flex-direction: column;
     overflow-x: hidden;
     flex-shrink: 0;
-    /* padding: 10px; */
-    /* background-color: pink; */
+    background-color: var(--full-page-color);
 }
+
+/* === ScrollBar Styles === */
+/* === ScrollBar Styles === */
 
 
 /* === Special Balises Styles === */
 
 /* La classe title est une classe appliquée aux titres de chacune des sections car ils ont le même style */
 h1.title{
-    font-family: "Abril Fatface", serif;
+    font-family: var(--title-font);
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
@@ -59,7 +60,7 @@ h1.title::before{
     content: " ";
     width: 30px;
     height: 5px;
-    background-color: #ADD981;
+    background-color: var(--primary-color);
     position: absolute;
     bottom: -2px;
     left: 0px;
@@ -71,7 +72,7 @@ section{
 }
 
 main{
-    background-color: white;
+    background-color: var(--full-page-color);
     height: auto;
     flex-grow: 1;
 }
@@ -115,6 +116,11 @@ header{
     width: 70px;
     height: 60px;
     cursor: pointer;
+    box-shadow: none; /* Supprime l'ombre bleue ou autre */
+    
+    /* Les lignes suivantes permettent de supprimer l'effet de sélection bleu clair */
+    user-select: none; /* Empêche la sélection de texte */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu-button span{
@@ -125,7 +131,7 @@ header{
     display: block;
     width: 100%;
     height: 2.5px;
-    background-color: white;
+    background-color: var(--full-page-color);
 }
 
 .menu-button .active:hover{
@@ -137,7 +143,7 @@ header{
     content: " ";
     width: 100%;
     height: 2.5px;
-    background-color: white;
+    background-color: var(--full-page-color);
     transition: 0.4s;
 }
 
@@ -196,7 +202,7 @@ header{
     width: 0%;
     height: 3px;
     border-radius: 5px;
-    background-color: #ADD981;
+    background-color: var(--primary-color);
 }
 
 .navbar li a:hover, .navbar li a:hover::before{
@@ -216,7 +222,7 @@ header{
 /* ===== MENU BAR ==== */
 
 .slogan h1{
-    font-family: "Abril Fatface", serif;
+    font-family: var(--title-font);
     font-weight: 300;
     font-style: normal;
     font-size: 60px;
@@ -226,23 +232,6 @@ header{
     color: white;
 }
 /* Header */
-/* .scroll-down{
-    background-color: red;
-}
-
-.scroll-down a{
-    font-size: 20px;
-    color: white;
-    position: absolute;
-    width: 100px;
-    bottom: 100px;
-    left: 50px;
-    text-decoration: none;
-}
-
-.scroll-down-icon{
-    font-size: 20px;
-} */
 
 /* services */
 .box-services{
@@ -257,7 +246,7 @@ header{
 
 .services .icons{
     font-size: 80px;
-    color: #ADD981;
+    color: var(--primary-color);
 }
 
 .icons-box{
@@ -271,7 +260,7 @@ header{
 }
 .icons-box p{
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--main-font);
     font-optical-sizing: auto;
     font-weight: 550;
     font-style: normal;
@@ -322,7 +311,7 @@ header{
     align-items: center;
     padding: 5px 10px;
     background-color: rgba(255, 255, 255, 0.913);
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--main-font);
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -332,11 +321,11 @@ header{
     text-transform: capitalize;
 }
 .plant-details p span{
-    color: #89ca48;
+    color: var(--primary-color);
 }
 .plant-details a{
     text-decoration: none;
-    background-color: #89ca48;
+    background-color: var(--primary-color);
     text-align: center;
     color: white;
     padding: 5px 15px;
@@ -400,7 +389,7 @@ header{
 /* main content */
 
 footer{
-    font-family: "Montserrat", serif;
+    font-family: var(--main-font);
     font-weight: 500;
     font-style: normal;
     font-size: 14px;
@@ -439,7 +428,6 @@ footer{
         padding-top: 10px;
     }
     .topbar{
-        /* background-color: slategray; */
         padding: 20px 30px;
         height: 100px;
     }
