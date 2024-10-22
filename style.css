@@ -43,7 +43,7 @@
     border: 20px;
 }
 
-
+/* Propriété qui change la couleur du bouton de scrollbar lorsau'il est sélectionné */
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--second-color);
 }
